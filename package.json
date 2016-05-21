@@ -1,0 +1,68 @@
+{
+  "name": "nodeschool-costarica-mentors-2016",
+  "version": "1.0.0",
+  "description": "Data of Mentors for NodeSchool International Day 2016 in Costa Rica",
+  "main": "index.js",
+  "dependencies": {
+    "argosbass": "^1.0.0",
+    "avenidanet": "^1.0.0",
+    "brolag": "^1.0.0",
+    "carlosv": "^1.0.2",
+    "cmonge": "^1.0.0",
+    "credondocr": "^2.0.1",
+    "dmunguia": "^1.0.0",
+    "esramru": "^1.0.0",
+    "gaboesquivel": "^1.0.2",
+    "gelopfalcon": "^1.0.0",
+    "gmmendezp": "^1.0.1",
+    "jarias": "^1.0.1",
+    "jasancheg": "^1.0.2",
+    "jeanlescure": "^1.0.1",
+    "jmonterroso": "^1.0.0",
+    "jperez": "^0.0.1",
+    "kevinblanco": "^1.0.0",
+    "laurensortiz": "^1.0.2",
+    "ledezman": "^1.0.0",
+    "msolano00": "^1.0.0",
+    "quiaro": "^1.0.0",
+    "rubenabix": "^1.0.2",
+    "stevenperez": "^1.0.2",
+    "yeco": "^1.0.0",
+    "esramru": "^1.0.0",
+    "agarcia": "^1.0.1",
+    "jonobral": "^1.0.1"
+  },
+  "devDependencies": {
+    "doctoc": "^1.0.0",
+    "jsonfile": "^2.2.3",
+    "precommit-hook": "^3.0.0",
+    "rimraf": "^2.5.2",
+    "standard": "^6.0.8"
+  },
+  "scripts": {
+    "test": "npm run lint",
+    "toJSON": "node scripts/saveToJSONFile",
+    "build": "npm run build:doc && npm test && npm run toJSON",
+    "build:doc": "doctoc --github --title \"## Contents\" ./",
+    "prepublish": "npm run build",
+    "lint": "standard index.js scripts/*.js",
+    "postinstall": "rimraf .jshintrc  && rimraf .jshintignore",
+    "validate": "npm ls"
+  },
+  "pre-commit": [
+    "lint"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CostaRicaJS/nodeschool-mentors-2016.git"
+  },
+  "keywords": [
+    "costaricajs"
+  ],
+  "author": "Gabo Esquivel <contact@gaboesquivel.com> (http://gaboesquivel.com/)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CostaRicaJS/nodeschool-mentors-2016/issues"
+  },
+  "homepage": "https://github.com/CostaRicaJS/nodeschool-mentors-2016#readme"
+}
